@@ -1,2 +1,2 @@
 package:
-	zip package.zip shb-plus.js manifest.webapp -r icons
+	zip package.zip backbutton.js manifest.webapp -r icons
