@@ -59,7 +59,29 @@
     back.style.fontWeight = 'bold';
     back.addEventListener('touchstart', function() {
       var app = window.wrappedJSObject.appWindowManager.getActiveApp();
-      app.iframe.goBack();
+
+      var request = app.iframe.getCanGoBack();
+      setTimeout(function(){
+          console.log("RESULT=" + request.result)
+          if (request.result){
+            app.iframe.goBack();
+          } else {
+            window.wrappedJSObject.StackManager.goPrev();
+          }
+      },50); 
+
+      /* 
+      The following code will not work, got "Permission denied to access object" 
+          when onsuccess was triggered
+
+      request.onsuccess = function(){
+          if (this.result){
+            app.iframe.goBack();
+          } else {
+            window.wrappedJSObject.StackManager.goPrev();
+          }
+      }
+      */
     }, true);
     buttons.appendChild(back);
   }
