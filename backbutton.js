@@ -84,6 +84,25 @@
       */
     }, true);
     buttons.appendChild(back);
+    
+    window.addEventListener('orientationchange', function(){
+      //console.log("ORIENTATION CHANGED")
+      if (window.screen.mozOrientation.includes('landscape')){
+        back.style.left = "-10px";
+        back.style.top = "";
+        back.style.bottom = "1.5rem";
+        showWindows.style.right = "";
+        showWindows.style.top = "1.5rem";
+        showWindows.style.left = "-10px";
+      } else {
+        back.style.left = "1rem";
+        back.style.top = "0";
+        back.style.bottom = "";
+        showWindows.style.right = "1rem";
+        showWindows.style.top = "0";
+        showWindows.style.left = "";
+      }
+    })
   }
 
   // Make sure we have the homebar element before booting.
