@@ -1,5 +1,5 @@
 {
-  "manifest_json":2,
+  "manifest_version":2,
   "name": "Back Button",
   "description": "Add back button (and show window button) to the software home button bar (Based on Michael Henretty's work)",
   "version": "1.1",
