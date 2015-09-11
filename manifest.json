@@ -5,7 +5,7 @@
   "version": "1.1",
   "author": "Shing Lyu",
   "content_scripts": [{
-    "matches": ["*://system.gaiamobile.org/*"],
+    "matches": ["app://system.gaiamobile.org/index.html"],
     "css": [],
     "js": ["backbutton.js"]
   }],

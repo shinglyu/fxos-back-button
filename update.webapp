@@ -2,7 +2,14 @@
   "name": "Back Button",
   "description": "Add back button (and show window button) to the software home button bar (Based on Michael Henretty's work)",
   "developer": {
-    "name": "Shing Lyu"
+    "name": "Shing Lyu",
+    "url": "https://shinglyu.github.io/"
   },
-  "package_path": "new-package.zip"
+  "type": "certified",
+  "package_path": "package.zip",
+  "icons": {
+    "64": "/icons/icon-64.png",
+    "128": "/icons/icon-128.png",
+    "256": "/icons/icon-256.png"
+  }
 }
